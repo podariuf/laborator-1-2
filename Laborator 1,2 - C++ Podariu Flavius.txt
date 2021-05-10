@@ -1,0 +1,136 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"n=";cin>>n;
+    cout<<(n<<3)<<endl;
+    cout<<(n>>2)<<endl;
+    cout<<(n<<3)+(n<<1)<<endl;
+
+    return 0;
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"n=";cin>>n;
+    if(((n&1)==0)==1)
+    {
+        cout<<"este par";
+    }
+    else
+    {
+        cout<<"este impar";
+    }
+    return 0;
+}
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x,n;
+    cout<<"x=";cin>>x;
+    do
+    {cout<<"n=";cin>>n;}
+    while((n<0)||(n>15));
+    cout<<"Bitul "<<n<<" din "<<x<<" este "<<((x>>n)& 1);
+    return 0;
+}
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x,n,alfa,beta;
+    cout<<"x=";cin>>x;
+    do
+    {cout<<"n=";cin>>n;}
+    while((n<0)||(n>15));
+    cout<<"Numarul "<<x<<" incare se seteaza bitul cu nr "<<n<<" cu 0 este "<<(n|(0<<x))<<endl;
+    cout<<"Numarul "<<x<<" incare se seteaza bitul cu nr "<<n<<" cu 1 este "<<(n|(1<<x))<<endl;
+    beta=x&((1<<n)-1);
+    alfa=x>>n;
+    cout<<"Numarul in care se sterge bitul "<<n<<" este "<<(alfa<<n)+beta<<endl;
+    if(((x>>n)& 1)==0)
+    {
+        cout<<"Nr cu bitul complementat este "<<(n|(1<<x));
+    }
+    else
+    {
+        cout<<"Nr cu bitul complementat este "<<(n|(0<<x));
+    }
+    return 0;
+}
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b;
+    
+    cout<<"Dati numerele a si b care trebuie interschimbate: "<<endl;
+    cout<<"a=";cin>>a;
+    cout<<"b=";cin>>b;
+    
+    a += b;
+    b = a - b;
+    a -= b;
+
+    
+    cout<<"noul a = "<<a<<endl;
+    cout<<"noul b = "<<b<<endl;
+    return 0;
+}
+
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+   int n;
+
+   cout<<"n=";cin>>n;
+
+ 
+if (n>0)
+{
+       if(((n&1)==0)==1)
+
+       {
+           cout<<"Numarul n este de forma 2k: "<<n;
+       }
+
+}
+
+ return 0;
+
+}
+
+
+
+
+

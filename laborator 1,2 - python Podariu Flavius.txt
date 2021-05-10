@@ -1,0 +1,52 @@
+n= int(input("n="))
+print(n<<3)
+print(n>>2)
+print((n<<3)+(n<<1))
+
+n=int(input("n="))
+if(((n&1)==0)==1):
+    print("Este par")
+else:
+    print("Nu este par")
+
+
+
+x=int(input("x="))
+n=int(input("n="))
+while (n<0)or(n>15):
+    n = int(input("n="))
+print("Bitul ",n," din ",x," este ",((x>>n)& 1))
+
+
+
+x=int(input("x="))
+n=int(input("n="))
+while (n<0)or(n>15):
+    n = int(input("n="))
+
+print("Numarul ",x," incare se seteaza bitul cu nr ",n," cu 0 este ",(n|(0<<x)))
+print("Numarul ",x," incare se seteaza bitul cu nr ",n," cu q este ",(n|(1<<x)))
+beta=x&((1<<n)-1)
+alfa=x>>n
+print("Numarul in care se sterge bitul ",n," este ",(alfa<<n)+beta)
+if ((x>>n)&1)==0:
+    print("Nr cu bitul complementat este ", (n | (1 << x)))
+else:
+    print("Nr cu bitul complementat este ", (n | (0 << x)))
+
+
+
+print("Dati numerele a si be care trebuie interschimbate")
+a=int(input("a="))
+b=int(input("b="))
+a +=b
+b=a - b
+a -= b
+print("Noul a este ",a)
+print("Noul b este ",b)
+
+a ^= b
+b ^= a
+a ^= b
+print("Noul a este ",a)
+print("Noul b este ",b)
